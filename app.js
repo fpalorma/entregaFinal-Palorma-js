@@ -23,5 +23,5 @@ let confirmacion = confirmacionInicial ? confirmacionInicial.toLowerCase(): conf
 let repetir = "";
 do{
     iniciarConversion()
-    repetir = prompt("desea realizar otra conversión? (si/no)")
+    repetir = prompt("desea realizar otra conversión? (si/no)").toLowerCase()
 }while(repetir == "si")
