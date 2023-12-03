@@ -1,10 +1,12 @@
 function convertir(pesos){
-    if(typeof pesos === "string"){
+    if(isNaN(pesos)){
         alert("ingrese un número")
+        console.log(pesos);
     }
     else{
-    let conversion = pesos*120
-alert(pesos+" Pesos serian "+conversion+" Fichas de Tomy y Daly")
+        let conversion = pesos/120
+        alert(pesos+" Pesos serian "+conversion+" Fichas de Tomy y Daly")
+        console.log(pesos);
 }}
 
 function iniciarConversion(){
