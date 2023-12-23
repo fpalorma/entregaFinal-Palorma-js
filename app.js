@@ -54,21 +54,26 @@ function verHistorial() {
     
     
     let mensaje = '';
-    historial.forEach((el) => {
+    
         let monedaALeer = moneda.toLowerCase()
         if (monedaALeer == "pesos"){
-            mensaje = mensaje + "convertiste " + el.pesos + " pesos"+ " a "+ el.fichas + " fichas "+ "a las: "+ el.horas+" horas "+el.minutos+" minutos con "+el.segundos+" segundos "+"\n"
+            historial.forEach((el)=>{
+                mensaje = mensaje + "convertiste " + el.pesos + " pesos"+ " a "+ el.fichas + " fichas "+ "a las: "+ el.horas+" horas "+el.minutos+" minutos con "+el.segundos+" segundos "+"\n"
+            })
+            alert(mensaje);
             
         }else if(monedaALeer == "fichas"){
-            mensaje = mensaje + "convertiste " + el.fichas  + " fichas"+ " de "+ el.pesos + " pesos"+ " a las: "+ el.horas+" horas "+el.minutos+" minutos con "+el.segundos+" segundos "+"\n"
+            historial.forEach((el)=>{
+                mensaje = mensaje + "convertiste " + el.fichas  + " fichas"+ " de "+ el.pesos + " pesos"+ " a las: "+ el.horas+" horas "+el.minutos+" minutos con "+el.segundos+" segundos "+"\n"
+            })
+            alert(mensaje);
         }else{
-            alert("elija una opcion válida")
-            let moneda = prompt("Elija en que moneda quiere ver el historial: \n pesos \n fichas")
-
+            mensaje = "Elija una opción válida"
+            alert(mensaje);
+            verHistorial();
         }
-    })
-    alert(mensaje);
-}
+    }
+
 
 function repetirOperacion() {
 
@@ -84,7 +89,7 @@ function repetirOperacion() {
                 verHistorial()
                 break;
             default:
-                alert("Opcion incorrecta")
+                alert("Opción incorrecta")
                 break;
         }
 
