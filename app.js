@@ -56,17 +56,19 @@ function verHistorial() {
     let mensaje = '';
     
         let monedaALeer = moneda.toLowerCase()
+        let pesosTotales = historial.reduce((acumulador,moneda) => acumulador + moneda.pesos, 0)
+        let fichasTotales = historial.reduce((acumulador,moneda) => acumulador + moneda.fichas, 0)
         if (monedaALeer == "pesos"){
             historial.forEach((el)=>{
                 mensaje = mensaje + "convertiste " + el.pesos + " pesos"+ " a "+ el.fichas + " fichas "+ "a las: "+ el.horas+" horas "+el.minutos+" minutos con "+el.segundos+" segundos "+"\n"
             })
-            alert(mensaje);
+            alert(mensaje + " En total has convertido " + pesosTotales + " pesos");
             
         }else if(monedaALeer == "fichas"){
             historial.forEach((el)=>{
                 mensaje = mensaje + "convertiste " + el.fichas  + " fichas"+ " de "+ el.pesos + " pesos"+ " a las: "+ el.horas+" horas "+el.minutos+" minutos con "+el.segundos+" segundos "+"\n"
             })
-            alert(mensaje);
+            alert(mensaje + " En total has convertido " + fichasTotales + " fichas");
         }else{
             mensaje = "Elija una opción válida"
             alert(mensaje);
