@@ -25,7 +25,7 @@ function convertir(pesos) {
     }
     else {
         let fichas = pesos / 120
-        divContenedorFichas.innerHTML = `<p> ${fichas} Fichas`
+        divContenedorFichas.innerHTML = `<p> ${fichas.toFixed(3)} Fichas`
 
         let hoy = new Date()
         let horas = hoy.getHours()
@@ -48,7 +48,7 @@ function verHistorial() {
 
     const parrafoHistorial = document.createElement("p")
     historial.forEach((el) => {
-        parrafoHistorial.innerHTML = `Convertiste ${el.pesos} pesos a ${el.fichas} fichas a las: ${el.horas} horas ${el.minutos} minutos con ${el.segundos} segundos`
+        parrafoHistorial.innerHTML = `Convertiste ${el.pesos} pesos a ${(el.fichas).toFixed(3)} fichas a las: ${el.horas} horas ${el.minutos} minutos con ${el.segundos} segundos`
         divContenedorHistorialConversion.appendChild(parrafoHistorial)
 
 
@@ -57,7 +57,7 @@ function verHistorial() {
 
         pesosTotales = historial.reduce((acumulador, moneda) => acumulador + moneda.pesos, 0);
         fichasTotales = historial.reduce((acumulador, moneda) => acumulador + moneda.fichas, 0);
-        divContenedorHistorialtotal.innerHTML = `<p>En total has convertido ${pesosTotales} pesos a ${fichasTotales} fichas </p>`
+        divContenedorHistorialtotal.innerHTML = `<p>En total has convertido ${pesosTotales} pesos a ${fichasTotales.toFixed(3)} fichas </p>`
 
     })
     }else{
@@ -65,7 +65,7 @@ function verHistorial() {
 
     const parrafoHistorial = document.createElement("p")
     historial.forEach((el) => {
-        parrafoHistorial.innerHTML = `Convertiste ${el.pesos} pesos a ${el.fichas} fichas a las: ${el.horas} horas ${el.minutos} minutos con ${el.segundos} segundos`
+        parrafoHistorial.innerHTML = `Convertiste ${el.pesos} pesos a ${(el.fichas).toFixed(3)} fichas a las: ${el.horas} horas ${el.minutos} minutos con ${el.segundos} segundos`
         divContenedorHistorialConversion.appendChild(parrafoHistorial)
 
 
@@ -74,7 +74,7 @@ function verHistorial() {
 
         pesosTotales = historial.reduce((acumulador, moneda) => acumulador + moneda.pesos, 0);
         fichasTotales = historial.reduce((acumulador, moneda) => acumulador + moneda.fichas, 0);
-        divContenedorHistorialtotal.innerHTML = `<p>En total has convertido ${pesosTotales} pesos a ${fichasTotales} fichas </p>`
+        divContenedorHistorialtotal.innerHTML = `<p>En total has convertido ${pesosTotales} pesos a ${fichasTotales.toFixed(3)} fichas </p>`
 
     })
     }
@@ -86,7 +86,7 @@ function cargaInicial() {
     if (historial.length > 0) {
         historial.forEach((el) => {
             const parrafoHistorial = document.createElement("p")
-            parrafoHistorial.innerHTML = `Convertiste ${el.pesos} pesos a ${el.fichas} fichas a las: ${el.horas} horas ${el.minutos} minutos con ${el.segundos} segundos`
+            parrafoHistorial.innerHTML = `Convertiste ${el.pesos} pesos a ${(el.fichas).toFixed(3)} fichas a las: ${el.horas} horas ${el.minutos} minutos con ${el.segundos} segundos`
             divContenedorHistorialConversion.appendChild(parrafoHistorial)
 
 
@@ -95,7 +95,7 @@ function cargaInicial() {
 
             pesosTotales = historial.reduce((acumulador, moneda) => acumulador + moneda.pesos, 0);
             fichasTotales = historial.reduce((acumulador, moneda) => acumulador + moneda.fichas, 0);
-            divContenedorHistorialtotal.innerHTML = `<p>En total has convertido ${pesosTotales} pesos a ${fichasTotales} fichas </p>`
+            divContenedorHistorialtotal.innerHTML = `<p>En total has convertido ${pesosTotales} pesos a ${fichasTotales.toFixed(3)} fichas </p>`
 
         })
     } else {
