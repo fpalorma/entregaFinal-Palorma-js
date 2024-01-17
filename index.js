@@ -52,7 +52,7 @@ function verHistorial() {
         parrafoHistorial.innerHTML = `Convertiste ${el.pesos} pesos a ${el.fichas} fichas a las: ${el.horas} horas ${el.minutos} minutos con ${el.segundos} segundos`
         divContenedorHistorialConversion.appendChild(parrafoHistorial)
         divContenedorHistorialtotal.innerHTML = `<p>En total has convertido ${pesosTotales} pesos a ${fichasTotales} fichas </p>`
-        location.reload()
+        // location.reload()
     }) 
     }else{
         let parrafoHistorial = document.createElement("p")
@@ -75,8 +75,6 @@ function cargaInicial(){
                 fichasTotales = historial.reduce((acumulador, moneda) => acumulador + moneda.fichas, 0);
                 divContenedorHistorialtotal.innerHTML = `<p>En total has convertido ${pesosTotales} pesos a ${fichasTotales} fichas </p>`
             }) 
-        }else{
-            verHistorial()
         }
     }
 

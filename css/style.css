@@ -146,3 +146,19 @@ main{
 .borrar-historial:hover{
     background-color: #6cb1cc;
 }
+
+@media (max-width:830px){
+    .conversor{
+        display:flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 0.5rem;
+    }
+.conversor-container-interno{
+    display: flex;
+    flex-direction: column;
+    gap:0.25rem;
+}
+
+}
