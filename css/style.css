@@ -12,7 +12,7 @@ body{
     
 }
 img{
-    width: 30vw;
+    width: 25vw;
     
 }
 h1{
@@ -69,4 +69,80 @@ main{
     width: 30vw;
     font-size: 1.3rem;
 }
+}
+
+/* Estilo del simulador de conversion */
+
+.conversor-container{
+    display:flex;
+    flex-direction: column;
+    gap: 2rem;
+    
+    padding:20px;
+}
+
+.conversor-container label{
+    text-align: center;
+    color: #ed1b24;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.conversor{
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.input-convertir{
+    background-color: #6cb1cc;
+    padding: .5rem;
+    
+}
+
+.btn-convertir{
+    border:none;
+    padding:.5rem;
+    border-radius: 10px;
+    text-transform: uppercase;
+    background-color: #6cb1cc;
+    cursor:pointer
+}
+
+.fichas-container p{
+    font-size: 1.5rem;
+    color: #ed1b24;
+    font-weight: bold;
+}
+
+.historial{
+    background-color: #fff6b9;
+    border-radius: 20px;
+    padding:10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.historial h2{
+    text-align: center;
+    text-decoration: underline;
+}
+
+.total-historial{
+    margin-top:20px;
+    font-family:monospace;
+    font-weight: bold;
+}
+.borrar-historial{
+    border: none;
+    cursor: pointer;
+    padding:.5rem;
+    border-radius: 10px;
+    text-transform: uppercase;
+    background-color: #00adf1;
+}
+
+.borrar-historial:hover{
+    background-color: #6cb1cc;
 }

@@ -1,27 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dinero de Tomy y Daly</title>
-    <link rel="stylesheet" href="../css/style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
     <header>
-    <div class="logo">
-        <a href="../index.html"><img src="../img/logo.jpg" alt="logo de Tomy y Daly"></a>
-    </div>
+      <div class="logo">
+        <a href="../index.html"
+          ><img src="../img/logo.jpg" alt="logo de Tomy y Daly"
+        /></a>
+      </div>
     </header>
     <main>
-        <h1>Conversor de divisas</h1>
-        <div class="contenedor-preguntas">
-            <p>Aquí podrás simular una conversión de <strong>Pesos argentinos</strong> a <strong>Fichas de Tomy y Daly</strong></p>
-        </div>
-        <div class="link-container">
+      <h1>Conversor de divisas</h1>
 
-            <a class="link-conversor"href="../index.html">Volver al inicio</a>
+      <div class="contenedor-preguntas">
+        <p>
+          Aquí podrás simular una conversión de
+          <strong>Pesos argentinos</strong> a
+          <strong>Fichas de Tomy y Daly</strong>
+        </p>
+      </div>
+
+      <div class="conversor-container">
+
+        <div class="conversor">
+            <label class="label-convertir" for="input-convertir">Pesos a convertir:</label>
+            <div>
+
+                <input type="number" class="input-convertir" id="input-convertir" placeholder="ingrese la cifra a convertir" required>
+                <button class="btn-convertir">Convertir</button>
+            </div>
+            <div class="fichas-container">
+
+                
+            </div>
         </div>
+
+        <div class="historial">
+            <h2>Historial</h2>
+            <div class="historial-conversiones">
+                
+            </div>
+                
+            <div class="total-historial">
+                
+            </div>
+            <button class="borrar-historial">Borrar historial</button>
+        </div>
+      </div>
+
+     
+      <div class="link-container">
+        <a class="link-conversor" href="../index.html">Volver al inicio</a>
+      </div>
     </main>
-    <script src="../app.js"></script>
-</body>
+    <script src="../index.js"></script>
+  </body>
 </html>
