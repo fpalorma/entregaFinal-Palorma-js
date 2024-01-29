@@ -66,8 +66,12 @@ main{
 
 @media (max-width:600px){
 .link-conversor{
-    width: 30vw;
+    width: auto;
     font-size: 1.3rem;
+}
+h1{
+    margin-right: 10px;
+    margin-left: 10px;
 }
 }
 
