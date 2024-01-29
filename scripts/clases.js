@@ -1,5 +1,6 @@
 export default class Conversion {
-    constructor(pesos, fichas, horas, minutos, segundos) {
+    constructor(id, pesos, fichas, horas, minutos, segundos) {
+        this.id = id;
         this.pesos = pesos;
         this.fichas = fichas;
         this.horas = horas;

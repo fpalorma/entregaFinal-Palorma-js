@@ -162,3 +162,16 @@ main{
 }
 
 }
+
+.conversion-eliminar{
+    border:0;
+    background-color: transparent;
+    color: red;
+    cursor:pointer;
+}
+
+.historial-conversiones div{
+    display: flex;
+    justify-content: space-between;
+    
+}

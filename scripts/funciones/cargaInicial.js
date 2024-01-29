@@ -1,12 +1,13 @@
 import { historial, divContenedorHistorialConversion, divContenedorHistorialtotal, parrafoHistorialVacio } from "../constantes/constantes.js"
+import actualizarBtnEliminar from "./btnEliminar.js"
 
 
 
 export default function cargaInicial() {
     if (historial.length > 0) {
         historial.forEach((el) => {
-            const parrafoHistorial = document.createElement("p")
-            parrafoHistorial.innerHTML = `Convertiste ${el.pesos} pesos a ${(el.fichas).toFixed(3)} fichas a las: ${el.horas} horas ${el.minutos} minutos con ${el.segundos} segundos`
+            const parrafoHistorial = document.createElement("div")
+            parrafoHistorial.innerHTML = `<p>Convertiste ${el.pesos} pesos a ${(el.fichas).toFixed(3)} fichas a las: ${el.horas} horas ${el.minutos} minutos con ${el.segundos} segundos</p> <button class="conversion-eliminar" id="${el.id}"><i class="bi bi-trash-fill"></i></button>`
             divContenedorHistorialConversion.appendChild(parrafoHistorial)
 
 
@@ -23,4 +24,5 @@ export default function cargaInicial() {
         parrafoHistorialVacio.innerHTML = `Aun no has convertido divisas`
         divContenedorHistorialConversion.appendChild(parrafoHistorialVacio)
     }
+    actualizarBtnEliminar();
 }
