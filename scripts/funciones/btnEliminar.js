@@ -19,6 +19,6 @@ function eliminarDelH(e) {
     historial.splice(index, 1);
     
     localStorage.setItem("conversion", JSON.stringify(historial))
+    
     location.reload();
-    verHistorial()
 }
